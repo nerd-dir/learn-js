@@ -70,10 +70,18 @@
     .classList
     .remove('no-js')
 </script>
+    <script>
+        function openMe() {
+         document.querySelector('.popuper').style.display = "block"; 
+        }
+         function closeMe() {
+         document.querySelector('.popuper').style.display = "none"; 
+        }
+    </script>
 </head>
     
 
-  <body class="contentPage">
+  <body class="contentPage" onload="openMe()">
       
       <nav class="main-nav" data-js="menu" data-state="closed">
         <div>
@@ -122,7 +130,7 @@
     <main>
         
       <div class="wrap">
-          <div class='popup'>
+          <div class='popuper' style="width:100vw;height:100vh; display: none; position: fixed; top: 0; left: 0;">
         <div class='cnt223'>
         <h1>Important Notice</h1>
         <hr/>
@@ -144,6 +152,7 @@
         <a href="https://t.me/n00bie_bot" target="_blank">t.me/n00bie_bot</a>
         </p>
         <hr/>
+            <button onclick="closeMe()"></button>
         <br/>
         </div>
       </div>
